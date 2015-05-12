@@ -31,4 +31,8 @@ function bindEvent(){
             $('header>ul>li:eq('+(nextIndex-1)+')').addClass('select');
         }
     });
+    //slideDown
+    $('.goDown').on('click',function(ev){
+        fullpage.moveSectionDown();
+    });
 }

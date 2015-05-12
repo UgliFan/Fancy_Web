@@ -1,4 +1,4 @@
-@animationRound:infinite;
+@animationRound:1;
 .lflogo-container{
     display:block;
     width:200px;
@@ -18,11 +18,11 @@
     width:40px;
     height:1px;
     background: #10D5DF;
-    border:1px solid #0faeb8;
+    border-top:1px solid #0faeb8;
     transform:rotate(135deg);
     -webkit-transform:rotate(135deg);
-    -moz-transform:rotate(135deg) ;
-    -ms-transform:rotate(135deg) ;
+    -moz-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
     -o-transform: rotate(135deg);
     -webkit-animation: topleftBefore 10s ease-out @animationRound;
     -o-animation: topleftBefore 10s ease-out @animationRound ;
@@ -299,9 +299,9 @@
     position:absolute;
     width:100%;
     height:100%;
-    -webkit-animation: leftin 10s ease-out infinite;
-    -o-animation: leftin 10s ease-out infinite;
-    animation: leftin 10s ease-out infinite;
+    -webkit-animation: leftin 10s ease-out @animationRound;
+    -o-animation: leftin 10s ease-out @animationRound;
+    animation: leftin 10s ease-out @animationRound;
 }
 .lflogo-container .round .logo .leftin div:nth-child(1){
     position: relative;
