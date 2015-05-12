@@ -1,0 +1,482 @@
+@animationRound:infinite;
+.lflogo-container{
+    display:block;
+    width:200px;
+    height:200px;
+    margin:120px auto;
+    background: rgba(16, 183, 193, 0.6);
+    position:relative;
+    border-radius:10px 10px 10px 10px;
+    overflow:hidden;
+}
+.lflogo-container:before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:17px;
+    left: -3px;
+    width:40px;
+    height:1px;
+    background: #10D5DF;
+    border:1px solid #0faeb8;
+    transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg) ;
+    -ms-transform:rotate(135deg) ;
+    -o-transform: rotate(135deg);
+    -webkit-animation: topleftBefore 10s ease-out @animationRound;
+    -o-animation: topleftBefore 10s ease-out @animationRound ;
+    animation: topleftBefore 10s ease-out @animationRound;
+}
+.lflogo-container:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:6px;
+    left:6px;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid #c6c6c6;
+    -webkit-animation: topleftAfter 10s ease-out @animationRound;
+    -o-animation: topleftAfter 10s ease-out @animationRound;
+    animation: topleftAfter 10s ease-out @animationRound;
+}
+
+.lflogo-container .ball{
+    display:block;
+    height:7px;
+    width:7px;
+    border-radius:50%;
+    position:absolute;
+    background:#fff;
+    top:48%;
+    left:48%;
+    opacity:0;
+    -webkit-animation: ball 10s ease-out @animationRound;
+    -o-animation:ball 10s ease-out @animationRound;
+    animation:ball 10s ease-out @animationRound;
+}
+.lflogo-container .ball .edge{
+    display:block;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    position:absolute;
+    background:#fff;
+}
+.lflogo-container .ball .edge:before{
+    content:"";
+    display:block;
+    background:#fff;
+    width:0px;
+    height:1px;
+    position:absolute;
+    top:3px;
+    -webkit-animation: edgeBefore 10s ease-out @animationRound;
+    -o-animation: edgeBefore 10s ease-out @animationRound;
+    animation: edgeBefore 10s ease-out @animationRound;
+}
+.lflogo-container .ball .edge .inner-edge{
+    display:block;
+    background:#fff;
+    width:100%;
+    height:100%;
+    border-radius:60%;
+    position:absolute;
+    -webkit-transform: rotate(240deg);
+    -moz-transform:  rotate(240deg);
+    -ms-transform:  rotate(240deg);
+    -o-transform:  rotate(240deg);
+    transform:  rotate(240deg);
+}
+.lflogo-container .ball .edge .inner-edge:before{
+    content:"";
+    display:block;
+    background:#fff;
+    width:0px;
+    height:1px;
+    position:absolute;
+    top:3px;
+    -webkit-animation: edgePre 10s ease-out @animationRound;
+    -o-animation:edgePre 10s ease-out @animationRound;
+    animation:edgePre 10s ease-out @animationRound;
+}
+.lflogo-container .ball:nth-child(1){
+    margin-left:0px;
+    margin-top:-94px;
+}
+.lflogo-container .ball:nth-child(1) .edge{
+    transform:rotate(150deg);
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -ms-transform:rotate(150deg) ;
+    -o-transform:rotate(150deg) ;
+}
+.lflogo-container .ball:nth-child(2){
+    margin-left:-81px;
+    margin-top:-47px;
+}
+.lflogo-container .ball:nth-child(2) .edge{
+    transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform:rotate(90deg) ;
+    -o-transform: rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+.lflogo-container .ball:nth-child(3){
+    margin-left:-81px;
+    margin-top:47px;
+}
+.lflogo-container .ball:nth-child(3) .edge{
+    transform:rotate(30deg);
+    -moz-transform:rotate(30deg) ;
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -webkit-transform:rotate(30deg);
+}
+.lflogo-container .ball:nth-child(4){
+    margin-left:0px;
+    margin-top:94px;
+}
+.lflogo-container .ball:nth-child(4) .edge{
+    transform:rotate(-30deg);
+    -moz-transform:rotate(-30deg) ;
+    -ms-transform:rotate(-30deg) ;
+    -o-transform: rotate(-30deg);
+    -webkit-transform:rotate(-30deg);
+}
+.lflogo-container .ball:nth-child(5){
+    margin-left:81px;
+    margin-top:47.5px;
+}
+.lflogo-container .ball:nth-child(5) .edge{
+    transform:rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform:rotate(-90deg) ;
+    -o-transform: rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+.lflogo-container .ball:nth-child(6){
+    margin-left:81px;
+    margin-top:-47px;
+}
+.lflogo-container .ball:nth-child(6) .edge{
+    transform:rotate(-150deg);
+    -moz-transform:rotate(-150deg) ;
+    -ms-transform:rotate(-150deg) ;
+    -o-transform: rotate(-150deg);
+    -webkit-transform:rotate(-150deg);
+}
+.lflogo-container .round{
+    position:absolute;
+    top:48%;
+    left:48%;
+    margin-top:-77px;
+    margin-left:-77px;
+    width:157px;
+    height:157px;
+    border:2px solid #fff;
+    box-sizing:content-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: round 10s ease-out @animationRound;
+    -o-animation:  round 10s ease-out @animationRound;
+    animation:  round 10s ease-out @animationRound;
+}
+
+@-webkit-keyframes edgeBefore{
+    0%{opacity:0;width:100px;}
+    12%{opacity:0;width:100px;}
+    13%{opacity:1;width:100px;}
+    20%{opacity:1;width:100px;}
+    24%{opacity:0.9;width:5px;}
+    25%{opacity:0;width:0px;}
+    100%{opacity:0;width:0px;}
+}
+@-o-keyframes edgeBefore{
+    0%{opacity:0;width:100px;}
+    12%{opacity:0;width:100px;}
+    13%{opacity:1;width:100px;}
+    20%{opacity:1;width:100px;}
+    24%{opacity:0.9;width:5px;}
+    25%{opacity:0;width:0px;}
+    100%{opacity:0;width:0px;}
+}
+@keyframes edgeBefore{
+    0%{opacity:0;width:100px;}
+    12%{opacity:0;width:100px;}
+    13%{opacity:1;width:100px;}
+    20%{opacity:1;width:100px;}
+    24%{opacity:0.9;width:5px;}
+    25%{opacity:0;width:0px;}
+    100%{opacity:0;width:0px;}
+}
+@-webkit-keyframes edgePre{
+    0%{opacity:0;width:0px;}
+    1%{opacity:0.9;width:5px;}
+    5%{opacity:1;width:100px;}
+    12%{opacity:1;width:100px;}
+    13%{opacity:0;width:100px;}
+    100%{opacity:0;width:100px;}
+}
+@-o-keyframes edgePre{
+    0%{opacity:0;width:0px;}
+    1%{opacity:0.9;width:5px;}
+    5%{opacity:1;width:100px;}
+    12%{opacity:1;width:100px;}
+    13%{opacity:0;width:100px;}
+    100%{opacity:0;width:100px;}
+}
+@keyframes edgePre{
+    0%{opacity:0;width:0px;}
+    1%{opacity:0.9;width:5px;}
+    5%{opacity:1;width:100px;}
+    12%{opacity:1;width:100px;}
+    13%{opacity:0;width:100px;}
+    100%{opacity:0;width:100px;}
+}
+@-webkit-keyframes ball{
+    0%{opacity:1;-webkit-transform: scale(0);}
+    1%{opacity:1;-webkit-transform: scale(1);}
+    24%{opacity:1;-webkit-transform: scale(1);}
+    25%{opacity:1;-webkit-transform: scale(0);}
+    100%{opacity:1;-webkit-transform: scale(0);}
+}
+@-o-keyframes ball{
+    0%{opacity:1;-o-transform: scale(0);}
+    1%{opacity:1;-o-transform: scale(1);}
+    24%{opacity:1;-o-transform: scale(1);}
+    25%{opacity:1;-o-transform: scale(0);}
+    100%{opacity:1;-o-transform: scale(0);}
+}
+@keyframes ball{
+    0%{opacity:1;transform: scale(0);}
+    1%{opacity:1;transform: scale(1);}
+    24%{opacity:1;transform: scale(1);}
+    25%{opacity:1;transform: scale(0);}
+    100%{opacity:1;transform: scale(0);}
+}
+
+@-webkit-keyframes round{
+    0%{opacity:1;-webkit-transform: rotate(0deg); border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    4%{opacity:1;-webkit-transform: rotate(-180deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    8%{opacity:1;-webkit-transform: rotate(-360deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:#fff;}
+    12%{opacity:1;-webkit-transform: rotate(-540deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:#fff;border-left-color:#fff;}
+    16%{opacity:1;-webkit-transform: rotate(-630deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    25%{opacity:1;-webkit-transform: rotate(-720deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    100%{opacity:1;-webkit-transform: rotate(-720deg);}
+}
+@-o-keyframes round{
+    0%{opacity:1;-o-transform: rotate(0deg); border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    4%{opacity:1;-o-transform: rotate(-180deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    8%{opacity:1;-o-transform: rotate(-360deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:#fff;}
+    12%{opacity:1;-o-transform: rotate(-540deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:#fff;border-left-color:#fff;}
+    16%{opacity:1;-o-transform: rotate(-630deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    25%{opacity:1;-o-transform: rotate(-720deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    100%{opacity:1;-o-transform: rotate(-720deg);}
+}
+@keyframes round{
+    0%{opacity:1;transform: rotate(0deg); border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    4%{opacity:1;transform: rotate(-180deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;}
+    8%{opacity:1;transform: rotate(-360deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:transparent;border-left-color:#fff;}
+    12%{opacity:1;transform: rotate(-540deg);border-top-color:#fff;border-right-color:transparent;border-bottom-color:#fff;border-left-color:#fff;}
+    16%{opacity:1;transform: rotate(-630deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    25%{opacity:1;transform: rotate(-720deg);border-top-color:#fff;border-right-color:#fff;border-bottom-color:#fff;border-left-color:#fff;}
+    100%{opacity:1;transform: rotate(-720deg);}
+}
+
+/*logo*/
+.lflogo-container .round .logo{
+    position: relative;
+    width:70%;
+    height:60%;
+    margin:10% auto 0 auto;
+}
+.lflogo-container .round .logo .leftin{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-animation: leftin 10s ease-out infinite;
+    -o-animation: leftin 10s ease-out infinite;
+    animation: leftin 10s ease-out infinite;
+}
+.lflogo-container .round .logo .leftin div:nth-child(1){
+    position: relative;
+    width:35%;
+    height:8px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius:4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background:#fff;
+    margin-left:45%;
+}
+.lflogo-container .round .logo .leftin div:nth-child(2){
+    position: relative;
+    width:70%;
+    height:8px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background:#fff;
+    margin-left:15%;
+    margin-top:30%;
+}
+
+.lflogo-container .round .logo .topin{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-animation: topin 10s ease-out @animationRound;
+    -o-animation: topin 10s ease-out @animationRound;
+    animation: topin 10s ease-out @animationRound;
+}
+.lflogo-container .round .logo .topin div:nth-child(1){
+    position: relative;
+    width:8px;
+    height:40%;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background:#fff;
+    margin-left:30%;
+}
+.lflogo-container .round .logo .topin div:nth-child(2){
+    position: relative;
+    width:8px;
+    height:80%;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background:#fff;
+    margin-left:50%;
+    margin-top:-20%;
+}
+
+@-webkit-keyframes leftin {
+    0%{opacity:0;left:-100px;}
+    25%{opacity:0;left:-100px;}
+    30%{opacity:1;left:0px;}
+    100%{opacity:1;left:0px;}
+}
+@-o-keyframes leftin {
+    0%{opacity:0;left:-100px;}
+    25%{opacity:0;left:-100px;}
+    30%{opacity:1;left:0px;}
+    100%{opacity:1;left:0px;}
+}
+@keyframes leftin {
+    0%{opacity:0;left:-100px;}
+    25%{opacity:0;left:-100px;}
+    30%{opacity:1;left:0px;}
+    100%{opacity:1;left:0px;}
+}
+@-webkit-keyframes topin {
+    0%{opacity:0;top:-100px;}
+    28%{opacity:0;top:-100px;}
+    31%{opacity:1;top:0px;}
+    100%{opacity:1;top:0px;}
+}
+@-o-keyframes topin {
+    0%{opacity:0;top:-100px;}
+    28%{opacity:0;top:-100px;}
+    31%{opacity:1;top:0px;}
+    100%{opacity:1;top:0px;}
+}
+@keyframes topin {
+    0%{opacity:0;top:-100px;}
+    28%{opacity:0;top:-100px;}
+    31%{opacity:1;top:0px;}
+    100%{opacity:1;top:0px;}
+}
+
+/*info*/
+.lflogo-container .round .info{
+    position: relative;
+    width:70%;
+    height:20px;
+    font-size:12px;
+    color: #e5e5e5;
+    text-align:center;
+    font-family:cursive,arial;
+    margin:4px auto 0 auto;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-animation: infoshow 10s ease-out @animationRound;
+    -o-animation: infoshow 10s ease-out @animationRound;
+    animation: infoshow 10s ease-out @animationRound;
+}
+
+@-webkit-keyframes infoshow {
+    0%{opacity:0;width:0;color: #2bdeeb;}
+    32%{opacity:1;width:0;color: #2bdeeb;}
+    37%{opacity:1;width:70%;color: #2bdeeb;}
+    40%{opacity:1;width:70%;color:#fff;}
+    42%{opacity:1;width:70%;color: #e5e5e5;}
+    45%{opacity:1;width:70%;color:#fff;}
+    48%{opacity:1;width:70%;color:#fff;}
+    49%{opacity:1;width:70%;color:#e5e5e5;}
+    100%{opacity:1;width:70%;color: #e5e5e5;}
+}
+@-o-keyframes infoshow {
+    0%{opacity:0;width:0;color: #2bdeeb;}
+    32%{opacity:1;width:0;color: #2bdeeb;}
+    37%{opacity:1;width:70%;color: #2bdeeb;}
+    40%{opacity:1;width:70%;color:#fff;}
+    42%{opacity:1;width:70%;color: #e5e5e5;}
+    45%{opacity:1;width:70%;color:#fff;}
+    48%{opacity:1;width:70%;color:#fff;}
+    49%{opacity:1;width:70%;color:#e5e5e5;}
+    100%{opacity:1;width:70%;color: #e5e5e5;}
+}
+@keyframes infoshow {
+    0%{opacity:0;width:0;color: #2bdeeb;}
+    32%{opacity:1;width:0;color: #2bdeeb;}
+    37%{opacity:1;width:70%;color: #2bdeeb;}
+    40%{opacity:1;width:70%;color:#fff;}
+    42%{opacity:1;width:70%;color: #e5e5e5;}
+    45%{opacity:1;width:70%;color:#fff;}
+    48%{opacity:1;width:70%;color:#fff;}
+    49%{opacity:1;width:70%;color:#e5e5e5;}
+    100%{opacity:1;width:70%;color: #e5e5e5;}
+}
+
+@-webkit-keyframes topleftBefore {
+    0%{opacity:0;width:0px;}
+    29%{opacity:0;width:0px;}
+    30%{opacity:1;width:40px;}
+    100%{opacity:1;width:40px;}
+}
+@-o-keyframes topleftBefore {
+    0%{opacity:0;width:0px;}
+    29%{opacity:0;width:0px;}
+    30%{opacity:1;width:40px;}
+    100%{opacity:1;width:40px;}
+}
+@keyframes topleftBefore {
+    0%{opacity:0;width:0px;}
+    29%{opacity:0;width:0px;}
+    30%{opacity:1;width:40px;}
+    100%{opacity:1;width:40px;}
+}
+
+@-webkit-keyframes topleftAfter {
+    0%{opacity:0;-webkit-transform:scale(0);}
+    25%{opacity:0;-webkit-transform:scale(0);}
+    30%{opacity:1;-webkit-transform:scale(1);}
+    100%{opacity:1;-webkit-transform:scale(1);}
+}
+@-o-keyframes topleftAfter {
+    0%{opacity:0;-o-transform:scale(0);}
+    25%{opacity:0;-o-transform:scale(0);}
+    30%{opacity:1;-o-transform:scale(1);}
+    100%{opacity:1;-o-transform:scale(1);}
+}
+@keyframes topleftAfter {
+    0%{opacity:0;transform:scale(0);}
+    25%{opacity:0;transform:scale(0);}
+    30%{opacity:1;transform:scale(1);}
+    100%{opacity:1;transform:scale(1);}
+}

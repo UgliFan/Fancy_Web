@@ -1,0 +1,104 @@
+@bg-trans: background 0.5s ease 0s;
+@all-trans: all 0.5s ease 0s;
+@bg-hover: rgba(255, 255, 255, 0.09);
+@font-family: Arial, "微软雅黑", "宋体", Tahoma, Helvetica, sans-serif;
+
+.transition(@trans:@all-trans) {
+  -webkit-transition: @trans;
+  -moz-transition: @trans;
+  -o-transition: @trans;
+  transition: @trans;
+}
+.positionFn(@p, @top:0, @left:0){
+  position: @p;
+  top: @top;
+  left: @left;
+}
+
+.hover {
+  cursor: pointer;
+  background: @bg-hover;
+  border-bottom:2px solid #dcdcdc;
+}
+
+.shder {
+  display: block;
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  font-family: @font-family;
+  .positionFn(fixed, 0, 0);
+  overflow:hidden;
+  z-index: 999;
+  .transition(@bg-trans);
+  ul {
+    height: 100%;
+    float: left;
+    margin-left: 150px;
+    li {
+      float: left;
+      padding: 0 20px 0 20px;
+      height: 100%;
+      .transition;
+      &:hover {
+        .hover;
+      }
+      &.select {
+        background: @bg-hover;
+        border-bottom:2px solid #dcdcdc;
+      }
+      a {
+        height: 100%;
+        line-height: 55px;
+        font-size: 14px;
+        color: #fff;
+        &:hover{ -webkit-transform:scale(1.2,1.2);}
+      }
+    }
+  }
+  .slideBtns {
+    position: absolute;
+    height: 100%;
+    width: 55px;
+    right:0;
+    top:0;
+    line-height: 55px;
+    .transition;
+    &:hover {
+      background: @bg-hover;
+    }
+    span {
+      .positionFn(absolute,18px,18px);
+      font-size: 20px;
+      color: #fff;
+      &:hover{
+        cursor:pointer;
+      }
+      &.hide {
+        display: none;
+      }
+      &.slideIn.show {
+        color: #bf570c;
+      }
+    }
+  }
+  &.shderHide {
+    border-radius: 0 0 8px 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@-webkit-keyframes rotateHeader {
+  0%{-webkit-transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(-8deg);}
+}
+@-o-keyframes rotateHeader {
+  0%{-o-transform:rotate(0deg);}
+  100%{-o-transform:rotate(-8deg);}
+}
+@keyframes rotateHeader {
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(-8deg);}
+}
